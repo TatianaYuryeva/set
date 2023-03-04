@@ -18,3 +18,10 @@ test('add all characters', () => {
     expect(value.length).toBe(3);
   });
 });
+
+test('convert set to array', () => {
+  const team = new Team();
+  team.add(swordsman);
+  team.add(mage);
+  expect(Array.isArray(team.toArray())).toBe(true);
+});
